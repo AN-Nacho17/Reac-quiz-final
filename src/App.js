@@ -1,8 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
-import './FormCss.css';
-import './bootstrap.css';
-import './QuestionComponent.css';
+import logo from './svg/logo.svg';
+import quizLogo from './svg/quiz.svg';
+import './css/App.css';
+import './css/bootstrap.css';
 import Swal from 'sweetalert2'
 import { HeaderComponent } from './HeaderComponent';
 import { FormComponent } from './FormComponent';
@@ -12,12 +11,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={quizLogo} className="App-logo" alt="logo" />
         <p>
           This is the React App lab by <strong>ASSEMBLER</strong> group
         </p>
-        <HeaderComponent />
         <FormComponent />
+        <HeaderComponent />
         <QuestionComponent />
       </header>
     </div>

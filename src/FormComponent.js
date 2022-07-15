@@ -1,35 +1,34 @@
 import React, { useState } from 'react'
-import { useRef } from 'react';
+import { useRef } from 'react'
 
 export const FormComponent = () => {
 
     const [name, setNameState] = useState("");
 
-    const setName = (newName) => {
+    const setName = (newName, e) => {
+        e.preventDefault();
         setNameState(newName);
     }
 
-    const setFinalName = (e) => {
+    const clearInput = (e) => {
         e.preventDefault();
-        inputField.current.value = "";
+        inputRef.current.value = "";
     }
 
-    const inputField = useRef("inputField");
+    const inputRef = useRef("inputRef");
 
     return (
         //form component
         <div className="row container">
             <div className="col-md-12 py-3 text-center">
-                <form>
+                <form onSubmit={e => clearInput(e)}>
                     <div className="form-group">
-                        <label htmlFor="name">Nombre</label>
-                        <input ref={inputField} onChange={e => setName(e.target.value)} type="text" className="form-control" id="name" placeholder="Ingresa tu nombre" />
+                        <input ref={inputRef} onChange={e => setName(e.target.value, e)} type="text" className="form-control text-center" id="name" placeholder="Ingresa tu nombre" />
                     </div>
-                    <button onClick={setFinalName} type="submit" className="btn btn-primary">Iniciar</button>
                 </form>
             </div>
             <div className="col-md-12 py-3 text-center">
-                <h1>Bienvenido ! {name}</h1>
+                <h1>Bienvenido {name} !</h1>
             </div>
         </div>
     )
