@@ -35,7 +35,17 @@ export const QuestionComponent = () => {
                 correctAnswers++;
             }
         }
-        Swal.fire('Quiz Results', `You got ${correctAnswers} out of ${totalQuestions} questions correct`, 'success');
+        if (correctAnswers == 0) {
+            //swal error
+            Swal.fire({
+                title: 'Error',
+                text: 'No has contestado ninguna pregunta correctamente',
+                icon: 'error',
+                confirmButtonText: 'Aceptar'
+            })
+        } else {
+            Swal.fire('Quiz Results', `You got ${correctAnswers} out of ${totalQuestions} questions correct`, 'success');
+        }
     }
 
     return (
