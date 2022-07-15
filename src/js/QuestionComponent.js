@@ -1,6 +1,6 @@
 import React from 'react'
 import Swal from 'sweetalert2';
-import submit from './svg/submit.svg';
+import submit from '../svg/submit.svg';
 
 
 export const QuestionComponent = () => {
@@ -25,7 +25,6 @@ export const QuestionComponent = () => {
 
     const setNewAnswer = (questionIndex, answer) => {
         userAnswers[questionIndex] = answer;
-        console.log("userAnswers", userAnswers);
     }
 
     const checkQuiz = () => {
