@@ -7,15 +7,17 @@ export const QuestionComponent = () => {
 
     const questions = [
 
-        { text: 'Cual es el imperio mas grande de la historia?', answers: ['Britanico', 'Mongol', 'Espanol', 'Romano'], correct: 'Britanico' },
+        { text: 'Como se llama el creador de Microsoft?', answers: ['Elon Musk', 'Steve Jobs', 'Mark Zuckerberg', 'Bill Gates'], correct: 'Bill Gates' },
 
-        { text: 'En que año termino la II Guerra Mundial?', answers: ['1919', '1856', '1989', '1945'], correct: '1945' },
+        { text: 'Cual es el area de hardware mas rapida de una computadora?', answers: ['RAM', 'Cache de CPU', 'ALU', 'Disco Mecanico', 'Tarjeta de red'], correct: 'Cache de CPU' },
 
-        { text: 'En que año fue la llegada de Cristobal Colon a America?', answers: ['1492', '1502', '1500', '1500'], correct: '1492' },
+        { text: 'Que es Java?', answers: ['Un algoritmo', 'Un motor de base de datos', 'Un lenguaje de programacion', 'Un provedor de internet'], correct: 'Un lenguaje de programacion' },
 
-        { text: 'Cual de los siguientes paises no estuvo involucrado en la II guerra mundial?', answers: ['EEUU', 'China', 'URSS', 'Vietnam'], correct: 'Vietnam' },
+        { text: 'Si deseo armar una computadora cuales componentes son indispensables?', answers: ['Software y Hardware', 'CPU y Place Madre', 'Sistema operativo y software  de aplicacion', 'Teclado y el mouse'], correct: 'CPU y Place Madre' },
 
-        { text: 'Cual fue el primer de Costa Rica?', answers: ['Juanito Mora', 'Carlos Alvarado', 'Braulio Carrillo', 'Jose M. Castro Madriz'], correct: 'Jose M. Castro Madriz' },
+        { text: 'Cual es el signifcado de las siglas CAD?', answers: ['Computer-aided design', 'Computer-assited design', 'Computer administration data'], correct: 'Computer-aided design' },
+
+        { text: 'Cual es el codigo que comprende una computadora?', answers: ['Codigo C++', 'Codigo Binario', 'Codigo ASCII'], correct: 'Codigo Binario' }
 
     ];
 
