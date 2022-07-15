@@ -1,8 +1,6 @@
-import logo from './svg/logo.svg';
 import quizLogo from './svg/quiz.svg';
 import './css/App.css';
 import './css/bootstrap.css';
-import Swal from 'sweetalert2'
 import { HeaderComponent } from './HeaderComponent';
 import { FormComponent } from './FormComponent';
 import { QuestionComponent } from './QuestionComponent';
