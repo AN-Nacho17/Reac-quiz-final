@@ -3,6 +3,7 @@ import './App.css';
 import './FormCss.css';
 import './bootstrap.css';
 import './QuestionComponent.css';
+import Swal from 'sweetalert2'
 import { HeaderComponent } from './HeaderComponent';
 import { FormComponent } from './FormComponent';
 import { QuestionComponent } from './QuestionComponent';

@@ -1,13 +1,22 @@
 import React from 'react'
 import { useRef } from 'react';
+import Swal from 'sweetalert2';
 
 
 export const QuestionComponent = () => {
 
     const questions = [
-        { text: 'What is your name?', answers: ['John', 'Jane', 'Bob', 'Jane'], correct: 'Jane' },
-        { text: 'What is your name?', answers: ['John', 'Jane', 'Bob', 'Jane'], correct: 'Jane' },
-        { text: 'What is your name?', answers: ['John', 'Jane', 'Bob', 'Jane'], correct: 'Jane' },
+
+        { text: 'Cual es el imperio mas grande de la historia?', answers: ['Britanico', 'Mongol', 'Espanol', 'Romano'], correct: 'Britanico' },
+
+        { text: 'En que año termino la II Guerra Mundial', answers: ['1919', '1856', '1989', '1945'], correct: '1945' },
+
+        { text: 'En que año fue la llegada de Cristobal Colon a America?', answers: ['1492', '1502', '1500', '1500'], correct: '1492' },
+
+        { text: 'Cual de los siguientes paises no estuvo involucrado en la II guerra mundial?', answers: ['EEUU', 'China', 'URSS', 'Vietnam'], correct: 'Vietnam' },
+
+        { text: 'Cual fue el primer de Costa Rica', answers: ['Juanito Mora', 'Carlos Alvarado', 'Braulio Carrillo', 'Jose M. Castro Madriz'], correct: 'Jose M. Castro Madriz' },
+
     ];
 
     const userAnswers = [
@@ -19,17 +28,29 @@ export const QuestionComponent = () => {
         console.log("userAnswers", userAnswers);
     }
 
+    const checkQuiz = () => {
+        let correctAnswers = 0;
+        let totalQuestions = questions.length;
+        for (let i = 0; i < questions.length; i++) {
+            if (userAnswers[i] == questions[i].correct) {
+                correctAnswers++;
+            }
+        }
+        Swal.fire('Quiz Results', `You got ${correctAnswers} out of ${totalQuestions} questions correct`, 'success');
+    }
+
     return (
         //question list
         <div className="question-list col-md-6">
+            <h3>Que tanto sabes de historia ?</h3>
             {
                 questions.map((question, questionIndex) => {
                     return (
                         <div key={questionIndex} className="question py-3">
                             <div className="card">
                                 <div className="card-body">
-                                    <h6 className="card-title text-dark">{question.text}
-                                    </h6>
+                                    <h5 className="card-title text-dark">{question.text}
+                                    </h5>
                                     <div className="question-answers">
                                         {question.answers.map((answer, index) => {
                                             const radioName = `questionRadio-${questionIndex}`;
@@ -52,28 +73,13 @@ export const QuestionComponent = () => {
                     )
                 })
             }
+            <div className="col-md-6">
+                <div className="text-center">
+                    <button onClick={e => checkQuiz()} className="btn btn-primary btn-lg">Submit</button>
+                </div>
+            </div>
         </div>
     )
 
-
-    // return (
-    //     <div className="question-container col-md-12">
-    //         {
-    //             questions.map((question, index) => {
-    //                 <div className="card">
-    //                     <div className="card-body">
-    //                         <h5 className="card-title">Question</h5>
-    //                         <p className="card-text">{question.text}</p>
-    //                         <ul className="list-group">
-    //                             {question.answers.map(answer => (
-    //                                 <li className="list-group-item" key={index}>{answer}</li>
-    //                             ))}
-    //                         </ul>
-    //                     </div>
-    //                 </div>
-    //             })
-    //         }
-    //     </div>
-    // )
 }
 
