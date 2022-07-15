@@ -46,7 +46,7 @@ export const QuestionComponent = () => {
                 confirmButtonText: 'Aceptar'
             })
         } else {
-            Swal.fire('Quiz Results', `You got ${correctAnswers} out of ${totalQuestions} questions correct`, 'success');
+            Swal.fire('Resultados del quiz', `Tienes ${correctAnswers}  respuestas correctas de ${totalQuestions} preguntas`, 'success');
         }
     }
 
