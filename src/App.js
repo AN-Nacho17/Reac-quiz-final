@@ -1,9 +1,9 @@
 import quizLogo from './svg/quiz.svg';
 import './css/App.css';
 import './css/bootstrap.css';
-import { HeaderComponent } from './HeaderComponent';
-import { FormComponent } from './FormComponent';
-import { QuestionComponent } from './QuestionComponent';
+import { HeaderComponent } from './js/HeaderComponent';
+import { FormComponent } from './js/FormComponent';
+import { QuestionComponent } from './js/QuestionComponent';
 
 function App() {
   return (
